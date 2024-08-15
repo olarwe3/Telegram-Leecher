@@ -166,7 +166,7 @@ async def handle_options(client, callback_query):
         )
         MSG.status_msg = await colab_bot.send_message(
             chat_id=OWNER,
-            text="#STARTING_TASK\n\n**Starting your task in a few Seconds...🦐**",
+            text="#STARTING_TASK\n\n**Starting task in a Second...🦐**",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [InlineKeyboardButton("Cancel ❌", callback_data="cancel")],
