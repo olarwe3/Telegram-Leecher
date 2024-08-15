@@ -19,17 +19,6 @@ src_request_msg = None
 @colab_bot.on_message(filters.command("start") & filters.private)
 async def start(client, message):
     await message.delete()
-    import requests
-
-# Load the image
-image_url = "https://telegra.ph/file/6f1cd0876262a073dfa76.jpg"
-try:
-    response = requests.get(image_url)
-    response.raise_for_status()  # Raise an exception for bad status codes
-    image_data = response.content
-except requests.exceptions.RequestException as e:
-    print(f"Error loading image: {e}")
-    # Handle the error gracefully, perhaps set image_data to None
     text = "**Hey There, 👋🏼 It's Colab Leecher**\n\n◲ I am a Powerful File Transloading Bot 🚀\n◲ I can Transfer Files To Telegram or Your Google Drive From Various Sources 🦐"
     keyboard = InlineKeyboardMarkup(
         [
